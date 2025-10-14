@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Pemesanan Barang</title>
+</head>
+<body style="font-family: Arial; background-color:#f2f2f2; margin:20px;">
+  <div style="width:850px; margin:auto; background:white; padding:20px; border:1px solid #ccc;">
+    <h2 style="text-align:center;">AGRES ID</h2>
+    <div style="text-align:center; margin-bottom:20px;">
+      <a href="#">Home</a> |
+      <a href="#">Generate Link</a> |
+      <a href="#">Transaction History</a> |
+      <a href="#">Policy</a> |
+      <a href="#">Logout</a>
+    </div>
+
+    <form action="hasil-pemesanan.html" method="get">
+      <div style="display:flex;">
+        <!-- Gambar Laptop -->
+        <div style="width:40%; text-align:center;">
+          <img src="macbook-air-15-inci_169.png" alt="MacBook" style="width:90%; border:1px solid #ccc; margin-bottom:10px;">
+        </div>
+
+        <!-- Form Input -->
+        <div style="width:60%; padding-left:20px;">
+          <label>Title Here :</label>
+          <input type="text" name="title" value="MacBook Air £800" style="width:90%; margin-bottom:10px;"><br>
+
+          <label>Description :</label><br>
+          <textarea name="description" style="width:90%; height:70px; margin-bottom:10px;">Year : 2009
+Model :
+Condition : Mint</textarea><br>
+
+          <label>Account Number :</label>
+          <input type="text" name="account" value="123-456-789-0" style="width:90%; margin-bottom:10px;"><br>
+
+          <label>Bank :</label>
+          <select name="bank" style="width:90%; margin-bottom:10px;">
+            <option>HSBC</option>
+            <option>Mandiri</option>
+            <option>BCA</option>
+            <option>BNI</option>
+          </select><br>
+
+          <label>Account Holder :</label>
+          <input type="text" name="holder" placeholder="Name Here" style="width:90%; margin-bottom:10px;"><br>
+
+          <label>Transaction :</label>
+          <input type="number" name="transaction" value="1" style="width:50px;">
+          <p style="font-size:12px;">* if the transaction is for 3 person, choose 3 from the drop-down list</p>
+
+          <input type="checkbox" name="sendMobile" checked> Send to Mobile Phone<br>
+          <input type="checkbox" name="sendEmail" checked> Send to Email<br><br>
+
+          <label>Send to Mobile Phone :</label><br>
+          <input type="text" name="mobile" value="1234567890, 1234567891" style="width:90%; margin-bottom:10px;"><br>
+
+          <label>Send to Email :</label><br>
+          <input type="email" name="email" value="mfrmm2g13@soton.ac.uk, fys_06@yahoo.com" style="width:90%; margin-bottom:20px;"><br>
+
+          <button type="submit" style="background-color:green; color:white; padding:10px 20px; border:none; cursor:pointer;">Generate Nabr Link</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hasil Pemesanan Barang</title>
+  <script>
+    // Ambil data dari URL dan tampilkan di halaman
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById('title').textContent = params.get('title');
+      document.getElementById('description').textContent = params.get('description');
+      document.getElementById('account').textContent = params.get('account');
+      document.getElementById('bank').textContent = params.get('bank');
+      document.getElementById('holder').textContent = params.get('holder');
+      document.getElementById('transaction').textContent = params.get('transaction');
+      document.getElementById('mobile').textContent = params.get('mobile');
+      document.getElementById('email').textContent = params.get('email');
+    }
+  </script>
+</head>
+<body style="font-family: Arial; background-color:#f2f2f2; margin:20px;">
+  <div style="width:850px; margin:auto; background:white; padding:20px; border:1px solid #ccc;">
+    <h2 style="text-align:center;">AGRES ID</h2>
+    <div style="text-align:center; margin-bottom:20px;">
+      <a href="#">Home</a> |
+      <a href="#">Register</a> |
+      <a href="#">Policy</a> |
+      <a href="#">About</a>
+    </div>
+
+    <div style="display:flex;">
+      <!-- Gambar Laptop -->
+      <div style="width:40%; text-align:center;">
+        <img src="macbook-air-15-inci_169.png" alt="MacBook" style="width:90%; border:1px solid #ccc;">
+      </div>
+
+      <!-- Hasil Data -->
+      <div style="width:60%; padding-left:20px;">
+        <p><b>Title Here :</b> <span id="title"></span></p>
+        <p><b>Description :</b><br><span id="description"></span></p>
+        <p><b>Account Number :</b> <span id="account"></span></p>
+        <p><b>Bank :</b> <span id="bank"></span></p>
+        <p><b>Account Holder :</b> <span id="holder"></span></p>
+        <p><b>Transaction :</b> <span id="transaction"></span></p>
+
+        <p><input type="checkbox" checked> Send to Mobile Phone<br>
+           <input type="checkbox" checked> Email me copy of transaction</p>
+
+        <p><b>Send to Mobile Phone :</b><br><span id="mobile"></span></p>
+        <p><b>Send to Email :</b><br><span id="email"></span></p>
+
+        <button style="background-color:green; color:white; padding:10px 20px; border:none; cursor:pointer;">Pay using QuidLink</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
