@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementasi CSS Box dan Positioning</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            background-color: white;
+            padding: 15px;
+        }
+        .content-area {
+            display: flex; 
+            gap: 15px; 
+        }
+        .box {
+            border: 2px solid black;
+        }
+        .header {
+            background-color: #a8e6a3;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .left-column {
+            width: 25%;
+            display: flex;
+            flex-direction: column; 
+            gap: 15px;
+        }
+
+        .right-column {
+            width: 75%; 
+            display: flex;
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        .yellow-box {
+            background-color: #fdfd96; 
+            height: 120px;
+        }
+
+        .orange-box {
+            background-color: #ff6b6b; 
+            height: 120px;
+        }
+
+        .blue-box {
+            background-color: #72d6e7;
+            height: 120px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header box"></div>
+
+        <div class="content-area">
+            
+            <div class="left-column">
+                <div class="yellow-box box"></div>
+                <div class="yellow-box box"></div>
+            </div>
+
+            <div class="right-column">
+                <div class="orange-box box"></div>
+                <div class="blue-box box"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

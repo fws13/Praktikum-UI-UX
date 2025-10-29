@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box dan Positioning</title>
+  <style>
+    body {
+      margin: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 800px;
+      margin: auto;
+      border: 1px solid #aaa;
+      padding: 10px;
+    }
+
+    .header {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .header .box1 {
+      background-color: #ffef61; 
+      width: 150px;
+      height: 80px;
+      border: 2px solid black;
+    }
+
+    .header .box2 {
+      background-color: #ff6b2f; 
+      flex: 1;
+      height: 80px;
+      border: 2px solid black;
+    }
+
+    .main {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .left {
+      background-color: lightgreen; 
+      width: 150px;
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+
+    .content {
+      background-color: #ccc; 
+      flex: 1;
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+
+    .right {
+      background-color: #44d8ff; 
+      width: 150px;
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+    .footer {
+      background-color: #007bff; 
+      height: 70px;
+      border: 1px solid #ccc;
+    }
+    .box {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+
+    <div class="main">
+      <div class="left box"></div>
+      <div class="content box"></div>
+      <div class="right box"></div>
+    </div>
+
+    <div class="footer box"></div>
+  </div>
+
+</body>
+</html>
