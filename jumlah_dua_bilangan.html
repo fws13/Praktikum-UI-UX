@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Menghitung Jumlah Dua Bilangan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 300px;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box; 
+        }
+        .symbol {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        input[readonly] {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input type="number" id="bil1" placeholder="Masukkan bilangan 1" onchange="hitungJumlah()">  
+        <div class="symbol">+</div>
+        <input type="number" id="bil2" placeholder="Masukkan bilangan 2" onchange="hitungJumlah()">
+        <div class="symbol">=</div>
+        <input type="number" id="hasil" readonly>
+    </div>
+
+    <script>
+        function hitungJumlah() {
+            var nilai1 = document.getElementById('bil1').value;
+            var nilai2 = document.getElementById('bil2').value;
+            var num1 = parseFloat(nilai1) || 0;
+            var num2 = parseFloat(nilai2) || 0;
+            var hasilPenjumlahan = num1 + num2;
+            document.getElementById('hasil').value = hasilPenjumlahan;   
+            console.log("Perhitungan: " + num1 + " + " + num2 + " = " + hasilPenjumlahan);
+        }
+    </script>
+
+</body>
+</html>

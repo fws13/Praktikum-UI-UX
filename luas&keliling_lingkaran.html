@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Luas & Keliling Lingkaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 350px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[readonly] {
+            background-color: #f9f9f9;
+            color: #333;
+            border-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kalkulator Lingkaran</h2>
+    <p>Masukkan panjang jari-jari (r) untuk menghitung luas dan keliling.</p>
+
+    <div class="container">
+        <div class="input-group">
+            <label for="jari">Jari-jari (r):</label>
+            <input type="number" id="jari" placeholder="Masukkan jari-jari" onchange="hitungLingkaran()">
+        </div>
+
+        <hr style="width: 100%; border: 0; border-top: 1px solid #eee;">
+        <div class="input-group">
+            <label for="luas">Luas (L = π × r²):</label>
+            <input type="text" id="luas" readonly placeholder="Hasil Luas">
+        </div>
+        <div class="input-group">
+            <label for="keliling">Keliling (K = 2 × π × r):</label>
+            <input type="text" id="keliling" readonly placeholder="Hasil Keliling">
+        </div>
+    </div>
+
+    <script>
+        function hitungLingkaran() {
+            var jariJari = document.getElementById('jari').value;
+            var r = parseFloat(jariJari);
+            if (!isNaN(r) && r >= 0) {
+                var luas = Math.PI * r * r;
+                var keliling = 2 * Math.PI * r;
+                document.getElementById('luas').value = luas.toFixed(2);
+                document.getElementById('keliling').value = keliling.toFixed(2);
+            } else {
+                document.getElementById('luas').value = "";
+                document.getElementById('keliling').value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
